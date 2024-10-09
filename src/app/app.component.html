@@ -1,0 +1,29 @@
+<h1>WebAssembly in Angular</h1>
+
+<label for="primeNumber">
+  <span>Input an positive integer: </span>
+  <input
+    id="primeNumber"
+    name="primeNumber"
+    type="number"
+    [ngModel]="number"
+    (ngModelChange)="checkNumber($event)"
+  />
+</label>
+<div>Number is prime: {{ isPrime }}</div>
+
+<div class="add">
+  <span>Add numbers: </span>
+  <input
+    type="number"
+    [ngModel]="numberf"
+    (ngModelChange)="add($event, true)"
+  />
+  <input
+    type="number"
+    [ngModel]="numbers"
+    (ngModelChange)="add($event, false)"
+  />
+
+  <p>{{ numberf }} + {{ numbers }} = {{ result }}</p>
+</div>
